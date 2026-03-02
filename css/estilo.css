@@ -1,124 +1,230 @@
-@font-face {
-    font-family:        fuente_delgada;
-    font-style:         normal;
-    font-weight:        normal;
-    src:                url('../ttf/Antonio-Regular.ttf');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@font-face {
-    font-family:        fuente_regular;
-    font-style:         normal;
-    font-weight:        normal;
-    src:                local('Trebuchet MS');
-}
-@font-face {
-    font-family:        fuente_decorativa;
-    font-style:         normal;
-    font-weight:        normal;
-    src:                url('../ttf/dreamporp.ttf');
-}
+
 body {
-    background:         cyan;
-    padding:            15%;
-    padding-top:        10px;
-    text-align:         center;
-    background:         blue;
-    background:         linear-gradient( to top right
-                                       , navy
-                                       , blue
-                                       , cyan
-                                       ); /* https://css-tricks.com/css3-gradients/ */
-    font-family:        fuente_decorativa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
-body * {
-    font-family:        fuente_regular;
-}
-a, input[type=submit] {
-    display:            inline-block;
-    background:         white;
-    color:              navy;
-    font-size:          1.5em;
-    margin:             15px;
-    border:             3px solid black;
-    padding:            15px;
-    border-radius:      5px;
-    text-decoration:    none;
-}
-a.PESTANHA {
-    background:         navy;
-    color:              cyan;
-    font-size:          1em;
-    border:             1px solid black;
-    border:             0px;
-    border-bottom:      1px solid navy;
-    border-radius:      15px 15px 0px 0px;
-    margin-bottom:      0px;
-}
-a.ACTIVA {
-    background:         white;
-    color:              navy;
-    border-bottom:      0px;
-    font-size:          1.3em;
-}
-nav {
-}
+
 header {
-    background:         cyan;
-    border-radius:      15px 15px 0px 0px;
-    padding:            15px;
-    font-size:          2em;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+header h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header .subtitle {
+  color: #666;
+  font-size: 0.9em;
+}
+
 main {
-    background:         white;
-    border:             0px;
-    border-radius:      0px 0px 15px 15px;
-    padding:            25px;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 30px;
+  min-height: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-footer * {
-    display:            inline-block;
-    background:         white;
-    margin:             5px;
-    margin-top:         0px;
-    border-radius:      0px 0px 5px 5px;
-    padding:            5px;
+
+footer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
 }
-.MENU_OPCIONES button {
-	height:		100px;
-	width:		100px;
-	margin:		10px;
-	font-size:	large;
+
+footer span {
+  display: inline-block;
+  margin: 0 15px;
+  color: #666;
+  font-size: 0.9em;
 }
-.SECCION {
-	display:	inline-block;
-	margin:		10px;
-	border:		3px solid grey;
-	border-radius:	10px;
-	padding:	5px;
-	vertical-align: top;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.PLATO {
-	text-align:	center;
-	border-bottom:	1px dotted black;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.PLATO .TIPO {
-	display: inline-block;
-	text-align:	left;
-	width:		145px;
+
+table th {
+  background: #667eea;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
 }
-.PLATO .NOMBRE {
-	display: inline-block;
-	text-align:	left;
-	width:		145px;
-    vertical-align: middle;
+
+table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
 }
-.PLATO .DESCRIPCION {
-	display: inline-block;
-	text-align:	left;
-	width:		145px;
-	font-size:	small;
-    vertical-align: middle;
+
+table tr:hover {
+  background: #f8f9fa;
 }
-.PLATO .PRECIO {
-	font-size:   	1.2em;
-    vertical-align: middle;
-    margin-left:    35px;
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button,
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #1e7e34;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #212529;
+}
+
+.btn-warning:hover {
+  background: #e0a800;
+}
+
+.alert {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.alert-error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.alert-info {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+.card-header {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #667eea;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #667eea;
+  margin: 10px 0;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9em;
 }
