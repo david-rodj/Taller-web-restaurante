@@ -7,7 +7,7 @@
 function fn_admin_gestion_mesas($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>🪑 Gestión de Mesas</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Gestión de Mesas</h2>";
     
     // Agregar mesa
     if (isset($_POST['agregar_mesa'])) {
@@ -59,7 +59,7 @@ function fn_admin_gestion_mesas($conn)
 function fn_admin_gestion_menu($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>📋 Gestión del Menú</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Gestión del Menú</h2>";
     
     // Listar platos
     $platos = ejecutar_funcion('fn_listar_platos_con_especialistas', array(), $conn);
@@ -90,7 +90,7 @@ function fn_admin_gestion_menu($conn)
 function fn_admin_reportes($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>📊 Reportes y Estadísticas</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Reportes y Estadísticas</h2>";
     
     // Estadísticas generales
     $stats = ejecutar_funcion('fn_estadisticas_restaurante', array(), $conn);
@@ -149,7 +149,7 @@ function fn_admin_reportes($conn)
 function fn_admin_reservaciones($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>📅 Todas las Reservaciones</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Todas las Reservaciones</h2>";
     
     $sentencia = "
         SELECT r.id, u.nombre as cliente, h.mesa_id, h.inicio, r.cantidad,

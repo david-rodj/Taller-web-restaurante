@@ -13,7 +13,7 @@ function fn_cliente_ver_menu($conn)
 /*--------------------------------------------------------------------*/
 {
     $retorno = fn_boton_menu_principal() . "
-    <h2>📋 Menú del Restaurante</h2>
+    <h2>Menú del Restaurante</h2>
     ";
     
     // Obtener tipos de platos
@@ -67,7 +67,7 @@ function fn_cliente_mis_reservaciones($conn)
     $cliente_id = $_SESSION['usuario_id'];
     
     $retorno = fn_boton_menu_principal() . "
-    <h2>📅 Mis Reservaciones</h2>
+    <h2>Mis Reservaciones</h2>
     ";
     
     $sentencia = "
@@ -139,7 +139,7 @@ function fn_cliente_mis_pedidos($conn)
     $cliente_id = $_SESSION['usuario_id'];
     
     $retorno = fn_boton_menu_principal() . "
-    <h2>🍽️ Mis Pedidos</h2>
+    <h2>Mis Pedidos</h2>
     ";
     
     $sentencia = "
@@ -197,7 +197,7 @@ function fn_cliente_detalle_pedido($conn)
     <a href='?opcion=cliente_mis_pedidos' class='btn btn-primary' style='margin:10px;'>
         ← Volver a Mis Pedidos
     </a>
-    <h2>🍽️ Detalle del Pedido #$pedido_id</h2>
+    <h2>Detalle del Pedido #$pedido_id</h2>
     ";
     
     $sentencia = "
@@ -274,7 +274,7 @@ function fn_cliente_mi_historial($conn)
     $cliente_id = $_SESSION['usuario_id'];
     
     $retorno = fn_boton_menu_principal() . "
-    <h2>📊 Mi Historial Completo</h2>
+    <h2>Mi Historial Completo</h2>
     ";
     
     $resultado = ejecutar_funcion('fn_historial_cliente', array($cliente_id), $conn);

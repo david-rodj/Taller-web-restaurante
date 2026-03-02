@@ -10,7 +10,7 @@ function fn_mesero_mis_pedidos($conn)
     session_start();
     $mesero_id = $_SESSION['usuario_id'];
     
-    $retorno = fn_boton_menu_principal() . "<h2>📋 Mis Pedidos Activos</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Mis Pedidos Activos</h2>";
     
     $resultado = ejecutar_funcion('fn_pedidos_listos_entregar', array($mesero_id), $conn);
     
@@ -38,7 +38,7 @@ function fn_mesero_pedidos_listos($conn)
     session_start();
     $mesero_id = $_SESSION['usuario_id'];
     
-    $retorno = fn_boton_menu_principal() . "<h2>✅ Pedidos Listos para Entregar</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Pedidos Listos para Entregar</h2>";
     
     $sentencia = "
         SELECT o.id, o.pedido_id, pl.nombre, o.cantidad
@@ -91,7 +91,7 @@ function fn_mesero_entregar($conn)
 function fn_mesero_ver_menu($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>📖 Menú (con tiempos)</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Menú (con tiempos)</h2>";
     
     $resultado = ejecutar_funcion('fn_menu_meseros', array(), $conn);
     

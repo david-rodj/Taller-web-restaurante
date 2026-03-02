@@ -16,7 +16,7 @@ function fn_boton_menu_principal()
     $script = "window.location.href='?opcion=menu_$rol';";
     $retorno = "<button onclick=\"$script\" style='margin:10px; padding:10px 20px; "
              . "background:#007bff; color:white; border:none; border-radius:5px; "
-             . "cursor:pointer;'>🏠 Menú Principal</button>";
+             . "cursor:pointer;'>Menú Principal</button>";
     return $retorno;
 }
 
@@ -31,7 +31,7 @@ function fn_boton_cerrar_sesion()
     $script = "window.location.href='?opcion=logout';";
     $retorno = "<button onclick=\"$script\" style='margin:10px; padding:10px 20px; "
              . "background:#dc3545; color:white; border:none; border-radius:5px; "
-             . "cursor:pointer;'>🚪 Cerrar Sesión</button>";
+             . "cursor:pointer;'>Cerrar Sesión</button>";
     return $retorno;
 }
 
@@ -88,7 +88,7 @@ function fn_login($conn)
     $retorno = "
     <div style='max-width:400px; margin:50px auto; padding:30px; background:white; 
                 border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);'>
-        <h1 style='text-align:center; color:#333;'>🍽️ Sistema Restaurante</h1>
+        <h1 style='text-align:center; color:#333;'>Sistema Restaurante</h1>
         <p style='text-align:center; color:#666; margin-bottom:30px;'>
             Universidad Javeriana - Bases de Datos
         </p>
@@ -125,11 +125,6 @@ function fn_login($conn)
         
         <div style='margin-top:30px; padding:15px; background:#f8f9fa; 
                     border-radius:5px; font-size:14px;'>
-            <strong>Usuarios de prueba:</strong><br/>
-            • Cliente: Carlos Andrés Rodríguez<br/>
-            • Mesero: Andrés Felipe Castillo<br/>
-            • Cocinero: Pedro Antonio García<br/>
-            • Administrador: Ricardo Naranjo Faccini<br/>
             • Contraseña: Colombia2024
         </div>
     </div>
@@ -165,21 +160,21 @@ function fn_menu_Cliente($conn)
     
     $retorno = "
     <div style='text-align:center;'>
-        <h1>👤 Menú del Cliente</h1>
+        <h1>Menú del Cliente</h1>
         <p>Bienvenido, <strong>$usuario_nombre</strong></p>
         
         <div style='margin:30px; display:inline-block;'>
             <a href='?opcion=cliente_ver_menu' class='boton-menu'>
-                📋 Ver Menú del Restaurante
+                Ver Menú del Restaurante
             </a>
             <a href='?opcion=cliente_mis_reservaciones' class='boton-menu'>
-                📅 Mis Reservaciones
+                Mis Reservaciones
             </a>
             <a href='?opcion=cliente_mis_pedidos' class='boton-menu'>
-                🍽️ Mis Pedidos
+                Mis Pedidos
             </a>
             <a href='?opcion=cliente_mi_historial' class='boton-menu'>
-                📊 Mi Historial
+                Mi Historial
             </a>
         </div>
         
@@ -229,24 +224,24 @@ function fn_menu_Mesero($conn)
     
     $retorno = "
     <div style='text-align:center;'>
-        <h1>🍽️ Menú del Mesero</h1>
+        <h1>Menú del Mesero</h1>
         <p>Bienvenido, <strong>$usuario_nombre</strong></p>
         
         <div style='margin:30px; display:inline-block;'>
             <a href='?opcion=mesero_tomar_pedido' class='boton-menu'>
-                ➕ Tomar Pedido
+                Tomar Pedido
             </a>
             <a href='?opcion=mesero_mis_pedidos' class='boton-menu'>
-                📋 Mis Pedidos Activos
+                Mis Pedidos Activos
             </a>
             <a href='?opcion=mesero_pedidos_listos' class='boton-menu'>
-                ✅ Pedidos Listos para Entregar
+                Pedidos Listos para Entregar
             </a>
             <a href='?opcion=mesero_entregar_pedido' class='boton-menu'>
-                🚚 Entregar Pedido
+                Entregar Pedido
             </a>
             <a href='?opcion=mesero_ver_menu' class='boton-menu'>
-                📖 Consultar Menú
+                Consultar Menú
             </a>
         </div>
         
@@ -296,21 +291,21 @@ function fn_menu_Cocinero($conn)
     
     $retorno = "
     <div style='text-align:center;'>
-        <h1>👨‍🍳 Menú del Cocinero</h1>
+        <h1>Menú del Cocinero</h1>
         <p>Bienvenido, <strong>$usuario_nombre</strong></p>
         
         <div style='margin:30px; display:inline-block;'>
             <a href='?opcion=cocinero_pedidos_pendientes' class='boton-menu'>
-                📝 Pedidos Pendientes
+                Pedidos Pendientes
             </a>
             <a href='?opcion=cocinero_mis_especialidades' class='boton-menu'>
-                ⭐ Mis Especialidades
+                Mis Especialidades
             </a>
             <a href='?opcion=cocinero_marcar_listo' class='boton-menu'>
-                ✅ Marcar Orden Lista
+                Marcar Orden Lista
             </a>
             <a href='?opcion=cocinero_ver_tiempos' class='boton-menu'>
-                ⏱️ Ver Tiempos de Preparación
+                Ver Tiempos de Preparación
             </a>
         </div>
         
@@ -360,27 +355,27 @@ function fn_menu_Administrador($conn)
     
     $retorno = "
     <div style='text-align:center;'>
-        <h1>⚙️ Menú del Administrador</h1>
+        <h1>Menú del Administrador</h1>
         <p>Bienvenido, <strong>$usuario_nombre</strong></p>
         
         <div style='margin:30px; display:inline-block;'>
             <a href='?opcion=admin_gestion_mesas' class='boton-menu'>
-                🪑 Gestión de Mesas
+                Gestión de Mesas
             </a>
             <a href='?opcion=admin_gestion_menu' class='boton-menu'>
-                📋 Gestión del Menú
+                Gestión del Menú
             </a>
             <a href='?opcion=admin_gestion_usuarios' class='boton-menu'>
-                👥 Gestión de Usuarios
+                Gestión de Usuarios
             </a>
             <a href='?opcion=admin_reportes' class='boton-menu'>
-                📊 Reportes y Estadísticas
+                Reportes y Estadísticas
             </a>
             <a href='?opcion=admin_reservaciones' class='boton-menu'>
-                📅 Ver Reservaciones
+                Ver Reservaciones
             </a>
             <a href='?opcion=admin_pedidos' class='boton-menu'>
-                🍽️ Ver Todos los Pedidos
+                Ver Todos los Pedidos
             </a>
         </div>
         

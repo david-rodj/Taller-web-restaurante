@@ -9,6 +9,6 @@ $host = "localhost";
 $port = "5432";
 $dbname = "restaurante";
 $user = "postgres";
-$password = "tu_password";  // CAMBIAR ESTO
+$password = "tu_password"; 
 
 ?>

@@ -7,7 +7,7 @@
 function fn_cocinero_pedidos_pendientes($conn)
 /*--------------------------------------------------------------------*/
 {
-    $retorno = fn_boton_menu_principal() . "<h2>📝 Pedidos Pendientes</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Pedidos Pendientes</h2>";
     
     $sentencia = "
         SELECT o.id, o.pedido_id, pl.nombre, pl.tiempo, o.cantidad, o.solicitado,
@@ -57,7 +57,7 @@ function fn_cocinero_mis_especialidades($conn)
     session_start();
     $cocinero_id = $_SESSION['usuario_id'];
     
-    $retorno = fn_boton_menu_principal() . "<h2>⭐ Mis Especialidades</h2>";
+    $retorno = fn_boton_menu_principal() . "<h2>Mis Especialidades</h2>";
     
     $resultado = ejecutar_funcion('fn_menu_cocinero', array($cocinero_id), $conn);
     
