@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang='es-CO'>
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Restaurante Javeriano - Bienvenido</title>
+    <link rel='stylesheet' href='css/estilo.css' />
+    <style>
+        body {
+            padding: 0;
+            background: var(--color-light);
+        }
+        
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-cafe) 100%);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-radius: 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 3em;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            font-family: Georgia, serif;
+        }
+        
+        .logo-text p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .login-btn {
+            background: var(--color-primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(217, 110, 60, 0.4);
+            background: #C9613A;
+        }
+        
+        /* HERO */
+        .hero {
+            margin-top: 100px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-cafe) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: Georgia, serif;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary-hero, .btn-secondary-hero {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .btn-primary-hero {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .btn-secondary-hero {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-primary-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary-hero:hover {
+            background: white;
+            color: var(--color-dark);
+        }
+        
+        /* FEATURES */
+        .features {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: var(--color-dark);
+            font-family: Georgia, serif;
+        }
+        
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+            transition: all 0.3s;
+            border-top: 3px solid var(--color-primary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(217, 110, 60, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--color-dark);
+        }
+        
+        /* STATS */
+        .stats {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-cafe) 100%);
+            color: white;
+        }
+        
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--color-dark);
+            color: var(--color-light);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0;
+            margin: 0;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class='header-content'>
+            <div class='logo'>
+                <div class='logo-icon'></div>
+                <div class='logo-text'>
+                    <h1>Restaurante Javeriano</h1>
+                    <p>Sabores que inspiran</p>
+                </div>
+            </div>
+            <a href='sistema.php' class='login-btn'> Iniciar Sesión</a>
+        </div>
+    </header>
+    
+    <!-- HERO -->
+    <section class='hero'>
+        <h2>Bienvenido a una Experiencia Gastronómica Única</h2>
+        <p>Descubre sabores colombianos, italianos y mexicanos en un solo lugar</p>
+        <div class='hero-buttons'>
+            <a href='sistema.php' class='btn-primary-hero'>Acceder al Sistema</a>
+            <a href='#about' class='btn-secondary-hero'>Conocer Más</a>
+        </div>
+    </section>
+    
+    <!-- FEATURES -->
+    <section class='features' id='about'>
+        <h2>¿Por qué elegirnos?</h2>
+        <div class='features-grid'>
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Chefs Expertos</h3>
+                <p>Especialistas en cocina colombiana, italiana y mexicana</p>
+            </div>
+            
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Ingredientes Frescos</h3>
+                <p>Solo la más alta calidad y frescura</p>
+            </div>
+            
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Sistema Digital</h3>
+                <p>Gestión moderna de pedidos y reservaciones</p>
+            </div>
+            
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Cocina Internacional</h3>
+                <p>Fusión perfecta de tres culturas gastronómicas</p>
+            </div>
+            
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Calidad Garantizada</h3>
+                <p>Cada plato con dedicación y altos estándares</p>
+            </div>
+            
+            <div class='feature-card'>
+                <div class='feature-icon'></div>
+                <h3>Eventos Especiales</h3>
+                <p>Perfecto para celebraciones y reuniones</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATS -->
+    <section class='stats'>
+        <div class='stats-grid'>
+            <div class='stat-item'>
+                <h3>100+</h3>
+                <p>Platos en el Menú</p>
+            </div>
+            <div class='stat-item'>
+                <h3>12</h3>
+                <p>Mesas Disponibles</p>
+            </div>
+            <div class='stat-item'>
+                <h3>50+</h3>
+                <p>Sillas de Capacidad</p>
+            </div>
+            <div class='stat-item'>
+                <h3>3</h3>
+                <p>Cocinas Internacionales</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <p><strong> Restaurante Colombiano, Mexicano e Italiano</strong></p>
+        <p>Pontificia Universidad Javeriana</p>
+        <p style='margin-top: 20px; opacity: 0.7;'>© 2025 - Sistema de Gestión de Restaurante</p>
+    </footer>
+</body>
+</html>
